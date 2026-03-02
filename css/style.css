@@ -1,0 +1,35 @@
+body {
+    margin: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #f4f6f5;
+}
+
+/* ===== GRID LAYOUT ===== */
+.hemsida{
+    display: grid;
+    grid-template-areas:
+        "header header"
+        "main aside"
+        "footer footer";
+    grid-template-columns: 5fr 1fr;
+}
+
+header{
+    grid-area: header;
+}
+aside{
+    grid-area: aside;
+}
+main{
+    grid-area: main;
+}
+footer{
+    grid-area: footer;
+}
+
+img{
+    width: 180px;
+}
+
+
+
