@@ -11,7 +11,7 @@ body {
         "header header"
         "main aside"
         "footer footer";
-    grid-template-columns: 5fr 1fr;
+    grid-template-columns: 5fr 10fr;
 }
 
 header{
@@ -31,5 +31,64 @@ img{
     width: 180px;
 }
 
+.calendar{
+  width: 200px;   /* change size here */
+  margin: auto;   /* center it */
+}
+
+ul {list-style-type: none;}
+body {font-family: Verdana, sans-serif;}
+
+/* Month header */
+.month {
+  padding: 70px 25px;
+  width: 100%;
+  background: #1abc9c;
+  text-align: center;
+}
+
+/* Month list */
+.month ul {
+  margin: 0;
+  padding: 0;
+}
+
+.month ul li {
+  color: white;
+  font-size: 15px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+/* Previous button inside month header */
+.month .prev {
+  float: left;
+  padding-top: 10px;
+}
+
+/* Next button */
+.month .next {
+  float: right;
+  padding-top: 10px;
+}
+
+.weekdays,
+.days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+}
+
+.weekdays li,
+.days li {
+    text-align: center;
+    font-size:12px;
+}
+
+/* Highlight the "current" day */
+.days li .active {
+  padding: 5px;
+  background: #1abc9c;
+  color: white !important
+}
 
 
