@@ -4,16 +4,17 @@ body {
     background: #f4f6f5;
 }
 
-/* ===== GRID LAYOUT ===== */
+/* GRID LAYOUT */
 .hemsida{
   display: grid;
   grid-template-areas:
       "header header"
       "main aside"
+      "section section"
       "footer footer";
   grid-template-columns: 5fr 2fr;
-  grid-template-rows: 2fr 5fr 200px;
-  height: 300vh;
+  grid-template-rows: 2fr 5fr 1fr 200px;
+  height: 400vh;
 }
 
 .bloggar{
@@ -27,11 +28,29 @@ body {
   height: 300vh;
 }
 
-.bread{
-  border: 1px solid #AAA;
-  padding: 1em; 
-  border-radius: 1em
+.schackresurser{
+  display: grid;
+  grid-template-areas:
+      "header header"
+      "main aside"
+      "footer footer";
+  grid-template-columns: 5fr 2fr;
+  grid-template-rows: 2fr 5fr 200px;
+  height: 300vh;
 }
+
+.tavlingar{
+  display: grid;
+  grid-template-areas:
+      "header header"
+      "main aside"
+      "footer footer";
+  grid-template-columns: 5fr 2fr;
+  grid-template-rows: 2fr 5fr 200px;
+  height: 300vh;
+}
+
+/*css areas*/
 
 nav {
     display: flex;
@@ -68,77 +87,77 @@ header{
   justify-content: space-between;
 }
 aside{
-    grid-area: aside;
+  grid-area: aside;
 }
 main{
-    grid-area: main;
+  grid-area: main;
+}
+section{
+  grid-area:section;
 }
 footer{
-    grid-area: footer;
+  grid-area: footer;
 }
 
+/*html tagger*/
 img{
-    width: 180px;
+  width: 180px;
 }
 
-/*====Calender====*/
-.calendar{
-  width: 200px;   
-  margin: auto;
+/*generic css classer*/
+
+.bread{
+  border: 1px solid #AAA;
+  padding: 1em; 
+  border-radius: 1em
 }
 
-aside ul {list-style-type: none;}
-aside body {font-family: Verdana, sans-serif;}
-
-
-.month {
-  padding: 70px 25px;
-  width: 100%;
-  background: #1abc9c;
-  text-align: center;
+/*css Calender*/
+.calendar {
+    max-width: 300px;
+    margin: auto;
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
 }
 
-
-.month ul {
-  margin: 0;
-  padding: 0;
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.month ul li {
-  color: white;
-  font-size: 15px;
-  text-transform: uppercase;
-  letter-spacing: 3px;
+.calendar-header button {
+    background: #14532d;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
 }
 
-
-.month .prev {
-  float: left;
-  padding-top: 10px;
-}
-
-
-.month .next {
-  float: right;
-  padding-top: 10px;
-}
-
-.weekdays,
-.days {
+.days, .dates {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
-}
-
-.weekdays li,
-.days li {
     text-align: center;
-    font-size:12px;
+    margin-top: 10px;
 }
 
-.days li .active {
-  padding: 5px;
-  background: #1abc9c;
-  color: white !important
+.days div {
+    font-weight: bold;
 }
 
+.dates div {
+    padding: 10px;
+    margin: 2px;
+    cursor: pointer;
+}
+
+.today {
+    background: gold;
+    border-radius: 50%;
+}
+
+.dates div:hover {
+    background: #ddd;
+}
 

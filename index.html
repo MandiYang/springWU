@@ -23,12 +23,12 @@
     </header>
     <main>
       <section>
-        <h3>Om oss</h3>
+        <h2>Om oss</h2>
           <p>MindMasters grundades 2020 och välkomnar spelare i alla åldrar och nivåer.</p>
           <p>Vi träffas varje vecka för träning, turneringar och gemenskap.</p>
       </section>
       <section>
-        <h3>Vad vi erbjuder</h3>
+        <h2>Vad vi erbjuder</h2>
         <ul>
           <li>Träningar och spel varje vecka</li>
           <li>Klubbturneringar</li>
@@ -39,62 +39,33 @@
     <aside>
       <h3>Kalender</h3>
       <div class="calendar">
-        <div class="month">
-          <ul>
-            <li class="prev">&#10094;</li>
-            <li class="next">&#10095;</li>
-            <li>August<br><span style="font-size:18px">2021</span></li>
-          </ul>
+        <div class="calendar-header">
+            <button onclick="prevMonth()">◀</button>
+            <h2 id="monthYear"></h2>
+            <button onclick="nextMonth()">▶</button>
         </div>
 
-        <ul class="weekdays">
-          <li>Mo</li>
-          <li>Tu</li>
-          <li>We</li>
-          <li>Th</li>
-          <li>Fr</li>
-          <li>Sa</li>
-          <li>Su</li>
-        </ul>
+        <div class="days">
+            <div>Mån</div>
+            <div>Tis</div>
+            <div>Ons</div>
+            <div>Tor</div>
+            <div>Fre</div>
+            <div>Lör</div>
+            <div>Sön</div>
+        </div>
 
-        <ul class="days">
-          <li>1</li>
-          <li>2</li>
-          <li>3</li>
-          <li>4</li>
-          <li>5</li>
-          <li>6</li>
-          <li>7</li>
-          <li>8</li>
-          <li>9</li>
-          <li>10</li>
-          <li>11</li>
-          <li>12</li>
-          <li>13</li>
-          <li>14</li>
-          <li>15</li>
-          <li>16</li>
-          <li>17</li>
-          <li>18</li>
-          <li>19</li>
-          <li>20</li>
-          <li><span class="active">21</span></li>
-          <li>22</li>
-          <li>23</li>
-          <li>24</li>
-          <li>25</li>
-          <li>26</li>
-          <li>27</li>
-          <li>28</li>
-          <li>29</li>
-          <li>30</li>
-          <li>31</li>
-        </ul>
+        <div class="dates" id="dates"></div>
       </div>
     </aside>
+    <section>
+      <h2>Vår styrelse</h2>
+      <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%2Fid%2FOIP.Phj53eTHvwsShYuzrgiNowHaE7%3Fpid%3DApi&f=1&ipt=caa8c1a0473044f46df43a0172e4c0676af19d301d4cfda32f0de2d14654bc89&ipo=images" alt="">
+    </section>
     <footer>
       <p>Kontakt: info@mindmasters.se</p>
     </footer>
   </div>
+  <script src="js/script.js"></script>
 </body>
 </html>
