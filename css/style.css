@@ -14,7 +14,7 @@ body {
       "footer footer";
   grid-template-columns: 5fr 2fr;
   grid-template-rows: 2fr 5fr 1fr 200px;
-  height: 400vh;
+  height: 260vh;
 }
 
 .bloggar{
@@ -60,6 +60,15 @@ nav {
     background: lightblue;
 }
 
+main button{
+  background: lightblue;
+  color: black;
+  font-size: 25px;
+  padding: 30px 50px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
 nav a {
     text-decoration: none;
     color: black;
@@ -72,14 +81,15 @@ nav a:hover {
   background: blue;
 }
 
-i{
+.bloggar i{
   text-align: right;display: block;font-size:0.7em
 }
+
 
 header{
   grid-area: header;
   background-image: url(/img/schackbild.jpg);
-  background-position: 40% 250%;
+  background-position: 40% 130%;
   background-size: cover;
   color: white;
   display: flex;
@@ -104,12 +114,19 @@ img{
   width: 180px;
 }
 
-/*generic css classer*/
+/*generic css classes*/
 
 .bread{
   border: 1px solid #AAA;
   padding: 1em; 
   border-radius: 1em
+}
+
+.avatar{
+  height: 200px;
+  width: auto;
+  border: 10px solid black;
+  border-radius: 5px
 }
 
 /*css Calender*/
@@ -128,7 +145,7 @@ img{
 }
 
 .calendar-header button {
-    background: #14532d;
+    background: black;
     color: white;
     border: none;
     padding: 5px 10px;
@@ -153,7 +170,7 @@ img{
 }
 
 .today {
-    background: gold;
+    background: lightblue;
     border-radius: 50%;
 }
 

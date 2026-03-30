@@ -64,7 +64,7 @@ function nextMonth() {
 }
 
 function selectDate(day) {
-    window.location.href = "https://schack.se/kalender/lista/?tribe-bar-date="+yearval+"-"+monthval+"-"+day;
+    window.open("https://schack.se/kalender/lista/?tribe-bar-date="+yearval+"-"+monthval+"-"+day, "_blank");
 }
 
 renderCalendar();
