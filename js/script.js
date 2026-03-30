@@ -1,6 +1,4 @@
 let currentDate = new Date();
-let monthval=currentDate.getMonth()+1
-let yearval=currentDate.getFullYear()
 
 function renderCalendar() {
     const datesContainer = document.getElementById("dates");
@@ -44,27 +42,26 @@ function renderCalendar() {
 }
 
 function prevMonth() {
+    currentDate.setDate(1); 
     currentDate.setMonth(currentDate.getMonth() - 1);
     renderCalendar();
-    monthval-=1;
-    if (monthval<=0) {
-        monthval=12
-        yearval-=1
-    }
 }
 
 function nextMonth() {
+    currentDate.setDate(1)
     currentDate.setMonth(currentDate.getMonth() + 1);
     renderCalendar();
-    monthval+=1;
-    if (monthval>12) {
-        monthval=1
-        yearval+=1
-    }
 }
 
 function selectDate(day) {
-    window.open("https://schack.se/kalender/lista/?tribe-bar-date="+yearval+"-"+monthval+"-"+day, "_blank");
+    let year = currentDate.getFullYear();
+    let month = currentDate.getMonth() + 1;
+
+    window.open(
+        "https://schack.se/kalender/lista/?tribe-bar-date=" 
+        + year + "-" + month + "-" + day,
+        "_blank"
+    );
 }
 
 renderCalendar();

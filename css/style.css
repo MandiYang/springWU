@@ -98,6 +98,9 @@ header{
 }
 aside{
   grid-area: aside;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 main{
   grid-area: main;
@@ -132,7 +135,6 @@ img{
 /*css Calender*/
 .calendar {
     max-width: 300px;
-    margin: auto;
     background: white;
     padding: 15px;
     border-radius: 10px;
